@@ -1,5 +1,15 @@
-var map;
-var milestone_4
+function recenter(mapName, latlon, zoomLevel) {
+mapName.setCenter(latlon);
+mapName.setZoom(zoomLevel)
+ }
+
+function addMarkers(mapName, markerArray) {
+for (index = 0; index < markerArray.length; index++) {
+myMarker = new google.maps.Marker({
+85 position: markerArray[index].point,
+86 title: markerArray[index].label
+87 });
+88 myMarker.setMap(mapName)
 
 function initialize() {
 geoCenter = new google.maps.LatLng(35.9241,-105.9316)
