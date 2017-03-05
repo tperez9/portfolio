@@ -48,19 +48,14 @@
 
   Sports.setMap(map);
       
-  //var markers = [
-        //['University of New Mexico', 35.08205, -106.62205, 1],
-        //['The Pit', 35.06687, -106.63224, 2]
-        //['University Stadium', 35.06695, -106.62845, 3]
-        //['Isotopes Park', 35.06992, -106.62842, 4]
-    //];
-        var markers = '<div id="content">'+
+//UNM        
+      var markers = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">UNM</h1>'+
             '<div id="bodyContent">'+
             '<p><b>University of New Mexico</b></p>'+
-            '<p><a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            '<p><a href="https://http://www.unm.edu/">'+
             'UNM Website</a> '+
             '</p>'+
             '</div>'+
@@ -78,6 +73,75 @@
         marker.addListener('click', function() {
           infowindow.open(map, marker);
         });
+//The Pit      
+      var markers = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">The Pit</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>UNM Basketball Stadium</b></p>'+
+            '<p><a href="https://https://www.unmtickets.com/">'+
+            'Buy Tickets Here</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: markers
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 35.06687, lng: -106.63224},
+          map: map,
+          title: 'The Pit'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+//Football
+        var markers = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">University Statdium</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>UNM Football Stadium</b></p>'+
+            '<p><a href="https://https://www.unmtickets.com/">'+
+            'Buy Tickets Here</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: markers
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 35.06695, lng: -106.62830},
+          map: map,
+          title: 'University Stadium'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });      
+//Isotopes
+      var markers = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Isotopes Park</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Albuquerqe Isotopes Baseball Stadium</b></p>'+
+            '<p><a href="https://https://http://www.milb.com/index.jsp?sid=t342">'+
+            'Buy Tickets Here</a> '+
+            '</p>'+
+            '</div>'+
+            '</div>';
+        var infowindow = new google.maps.InfoWindow({
+          content: markers
+        });
+        var marker = new google.maps.Marker({
+          position: {lat: 35.06993, lng: -106.62899},
+          map: map,
+          title: 'Isotopes Park'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });  
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHswgdrnAwpq0tNrKxLmk3QZzirT2vDEM&callback=initMap"
