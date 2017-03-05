@@ -48,20 +48,34 @@
 
   Sports.setMap(map);
       
-  var markers = [
-        ['University of New Mexico', 35.08205, -106.62205, 1],
-        ['The Pit', 35.06687, -106.63224, 2]
-        ['University Stadium', 35.06695, -106.62845, 3]
-        ['Isotopes Park', 35.06992, -106.62842, 4]
-    ];
-  var marker, i;
+  //var markers = [
+        //['University of New Mexico', 35.08205, -106.62205, 1],
+        //['The Pit', 35.06687, -106.63224, 2]
+        //['University Stadium', 35.06695, -106.62845, 3]
+        //['Isotopes Park', 35.06992, -106.62842, 4]
+    //];
+        var markers = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>University of New Mexico</b>
+            '</p>'+
+            '</div>'+
+            '</div>';
 
-    for (i = 0; i < marker.length; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(markers[i][1], markers[i][2]),
-        map: map
-      });
-    ];
+        var infowindow = new google.maps.InfoWindow({
+          content: markers
+        });
+
+        var marker = new google.maps.Marker({
+          position: 35.08205, -106.62205,
+          map: map,
+          title: 'UNM'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHswgdrnAwpq0tNrKxLmk3QZzirT2vDEM&callback=initMap"
