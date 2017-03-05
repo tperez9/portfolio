@@ -46,9 +46,26 @@
     strokeWeight: 2
   });
   Sports.setMap(map);
-        
-
-      }
+ function addMarker(feature) {
+  var marker = new google.maps.Marker({
+     position: feature.position,
+     map: map
+  });
+ }
+   var features = [
+ {
+     position: new google.maps.LatLng(35.08190, -106.62190),
+ }, {
+     position: new google.maps.LatLng(35.06687, -106.63223),
+ }, {  
+     position: new google.maps.LatLng(35.06685, -106.62842),
+ }, {
+     position: new google.maps.LatLng(35.06992, -106.62898),
+ },
+     ];
+     for (var i = 0, feature; feature = features[i]; i++) {
+          addMarker(feature);
+       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHswgdrnAwpq0tNrKxLmk3QZzirT2vDEM&callback=initMap"
     async defer></script>
