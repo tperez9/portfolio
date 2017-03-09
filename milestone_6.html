@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://schemas.opengis.net/wms/1.1.1/WMS_MS_Capabilities.dtd">
+<!--  end of DOCTYPE declaration  -->
 <WMT_MS_Capabilities version="1.1.1">
+<!--
+ MapServer version 6.0.3 OUTPUT=GIF OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=ICONV SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE 
+-->
 <Service>
 <Name>OGC:WMS</Name>
 <Title>g_2007fe_35_county</Title>
@@ -51,24 +53,13 @@ Earth Data Analysis Center, MSC01 1110, 1 University of New Mexico
 </DCPType>
 </GetCapabilities>
 <GetMap>
- <?xml version="1.0" encoding="UTF-8"?>
- <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2"
- xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
- <GroundOverlay>
- <name>RGIS Counties WMS</name>
- <Icon>
-  <href>http://gstore.unm.edu/apps/rgis/datasets/6ca5428a-a78c-4c82-8120-da70dc92f2cc/services/ogc/wms?
-    VERSION=1.1.1&;SERVICE=WMS&;REQUEST=GetMap&;BBOX=-109,31,-102.9,37.1&;LAYERS=tl_2010_35_state10&;WIDTH=200&;
-    HEIGHT=200&;SRS=EPSG:4326&;TRANSPARENT=TRUE&;FORMAT=image/jpg&;STYLES=</href>
-  </Icon>
- <LatLonBox>
- <north>37.32753828398865</north>
- <south>30.86418272137246</south>
- <east>-101.3630220689848</east>
- <west>-110.6891149310152</west>
- </LatLonBox>
-</GroundOverlay>
-</kml>
+<Format>image/png</Format>
+<Format>image/gif</Format>
+<Format>image/jpeg</Format>
+<Format>image/png; mode=8bit</Format>
+<Format>image/tiff</Format>
+<Format>application/vnd.google-earth.kml+xml</Format>
+<Format>application/vnd.google-earth.kmz</Format>
 <DCPType>
 <HTTP>
 <Get>
@@ -187,7 +178,7 @@ New Mexico County Boundaries (2007FE, TIGER, Current)
 <Title>default</Title>
 <LegendURL width="72" height="22">
 <Format>image/png</Format>
-<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?version=1.1.1&service=WMS&request=GetLegendGraphic&layer=g_2007fe_35_county&format=image/png&STYLE=default"/>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?version=1.1.1&service=WMS&request=GetMapGraphic&layer=-107.2,34.7,-106,35.25; EPSG:4326&format=image/png&STYLE=default"/>
 </LegendURL>
 </Style>
 </Layer>
