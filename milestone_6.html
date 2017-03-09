@@ -51,13 +51,16 @@ Earth Data Analysis Center, MSC01 1110, 1 University of New Mexico
 </DCPType>
 </GetCapabilities>
 <GetMap>
-<Format>image/png</Format>
-<Format>image/gif</Format>
-<Format>image/jpeg</Format>
-<Format>image/png; mode=8bit</Format>
-<Format>image/tiff</Format>
-<Format>application/vnd.google-earth.kml+xml</Format>
-<Format>application/vnd.google-earth.kmz</Format>
+ <?xml version="1.0" encoding="UTF-8"?>
+ <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2"
+ xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+ <GroundOverlay>
+ <name>RGIS Counties WMS</name>
+ <Icon>
+  <href>http://gstore.unm.edu/apps/rgis/datasets/6ca5428a-a78c-4c82-8120-da70dc92f2cc/services/ogc/wms?
+    VERSION=1.1.1&;SERVICE=WMS&;REQUEST=GetMap&;BBOX=-109,31,-102.9,37.1&;LAYERS=tl_2010_35_state10&;WIDTH=200&;
+    HEIGHT=200&;SRS=EPSG:4326&;TRANSPARENT=TRUE&;FORMAT=image/jpg&;STYLES=</href>
+  
 <DCPType>
 <HTTP>
 <Get>
