@@ -1,4 +1,4 @@
-var styles = [
+     var styles = [
         'Road',
         'Aerial',
         'AerialWithLabels',
@@ -27,8 +27,8 @@ var styles = [
         loadTilesWhileInteracting: true,
         target: 'map',
         view: new ol.View({
-          center: [-105.9316, 35.9241],
-          zoom: 8
+          center: [-6655.5402445057125, 6709968.258934638],
+          zoom: 13
         })
       });
 
