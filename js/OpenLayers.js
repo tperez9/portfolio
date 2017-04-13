@@ -28,7 +28,7 @@ var styles = [
         target: 'map',
         view: new ol.View({
           center: [35.9241, -105.9316],
-          zoom: 13
+          zoom: 8
         })
       });
 
