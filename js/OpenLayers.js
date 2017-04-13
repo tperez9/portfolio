@@ -1,4 +1,15 @@
-var styles = [
+      var map = new ol.Map({
+        layers: layers,
+        // Improve user experience by loading tiles while dragging/zooming. Will make
+        // zooming choppy on mobile or slow devices.
+        loadTilesWhileInteracting: true,
+        target: 'map',
+        view: new ol.View({
+          center: [35.9241, -105.9316],
+          zoom: 8
+        })
+      });
+     var styles = [
         'Road',
         'Aerial',
         'AerialWithLabels',
@@ -20,17 +31,7 @@ var styles = [
           })
         }));
       }
-      var map = new ol.Map({
-        layers: layers,
-        // Improve user experience by loading tiles while dragging/zooming. Will make
-        // zooming choppy on mobile or slow devices.
-        loadTilesWhileInteracting: true,
-        target: 'map',
-        view: new ol.View({
-          center: [35.9241, -105.9316],
-          zoom: 8
-        })
-      });
+      
 
       var select = document.getElementById('layer-select');
       function onChange() {
