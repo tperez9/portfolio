@@ -9,8 +9,14 @@
      </head>
      <body>
       <h1>Nambe Badlands</h1>
-      <div id='map'>  </div>   
-          
+          <div id="map" class="map">  </div>
+          <select id="layer-select">
+                <option value="Aerial">Aerial</option>
+               <option value="AerialWithLabels" selected>Aerial with labels</option>
+               <option value="Road">Road</option>
+               <option value="collinsBart">Collins Bart</option>
+               <option value="ordnanceSurvey">Ordnance Survey</option>
+           </select>        
        <script src="js/OpenLayers_01.js" type="text/javascript"></script>
     </body>
   </html>
