@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Milestone 8</title>
+    <title>ArcGIS REST with 512x512 Tiles</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.0.1/css/ol.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
     <script src="https://openlayers.org/en/v4.0.1/build/ol.js"></script>
   </head>
   <body>
-    <h1>Nambe Badlands</h1>
-    <div id='map'><!-- This is where the map will be displayed --></div>
-    var myMap = new ol.Map({
-target: 'map',
-layers: [
-new ol.layer.Tile({
-source: new ol.source.OSM()
-})
-],
-view: new ol.View({
-center: ol.proj.fromLonLat([-106.624083,35.08427]),
-zoom: 18
-})
-});
-    <script src="js/OpenLayers_01.js" type="text/javascript"></script>
+    <div id="map" class="map"></div>
+    <script>
+      var attribution = new ol.Attribution({
+        html: 'Copyright:© 2013 ESRI, i-cubed, GeoEye'
+      });
+
+      var projection = ol.proj.get('EPSG:4326');
+
+      // The tile size supported by the ArcGIS tile service.
+      var tileSize = 512;
+
+      var urlTemplate = 'https://services.arcgisonline.com/arcgis/rest/services/' +
+          'ESRI_Imagery_World_2D/MapServer/tile/{z}/{y}/{x}';
+
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.XYZ({
+              attributions: [attribution],
+              maxZoom: 16,
+              projection: projection,
+              tileSize: tileSize,
+              tileUrlFunction: function(tileCoord) {
+                return urlTemplate.replace('{z}', (tileCoord[0] - 1).toString())
+                                  .replace('{x}', tileCoord[1].toString())
+                                  .replace('{y}', (-tileCoord[2] - 1).toString());
+              },
+              wrapX: true
+            })
+          })
+        ],
+        view: new ol.View({
+          center: [0, 0],
+          projection: projection,
+          zoom: 2,
+          minZoom: 2
+        })
+      });
+    </script>
   </body>
 </html>
