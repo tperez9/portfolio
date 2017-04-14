@@ -31,13 +31,3 @@
           zoom: 13
         })
       });
-
-      var select = document.getElementById('layer-select');
-      function onChange() {
-        var style = select.value;
-        for (var i = 0, ii = layers.length; i < ii; ++i) {
-          layers[i].setVisible(styles[i] === style);
-        }
-      }
-      select.addEventListener('change', onChange);
-      onChange();
