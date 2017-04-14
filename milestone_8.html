@@ -42,15 +42,13 @@
       }
      var nambeLonLat = [-105.9316, 35.9241];
      var nambeWebMercator = ol.proj.fromLonLat(nambeLonLat);
-
      var map = new ol.Map({
-          layers: [
-           new ol.layer.Tile({
-                source: new ol.source.OSM()
-           })
-          ],
-           target: 'map',
-          view: new ol.View({
+        layers: layers,
+        // Improve user experience by loading tiles while dragging/zooming. Will make
+        // zooming choppy on mobile or slow devices.
+        loadTilesWhileInteracting: true,
+        target: 'map',
+        view: new ol.View({
            center: nambeWebMercator,
            zoom: 13
             })
