@@ -1,4 +1,4 @@
-     var styles = [
+      var styles = [
         'Road',
         'Aerial',
         'AerialWithLabels',
@@ -20,12 +20,14 @@
           })
         }));
       }
-     var map = new ol.Map({
+      var map = new ol.Map({
         layers: layers,
+        // Improve user experience by loading tiles while dragging/zooming. Will make
+        // zooming choppy on mobile or slow devices.
         loadTilesWhileInteracting: true,
         target: 'map',
         view: new ol.View({
-          center: [-6625526.938639, -23210500.106945],
+          center: [-105.9316, 35.9241],
           zoom: 13
         })
       });
