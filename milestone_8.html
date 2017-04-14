@@ -40,17 +40,21 @@
           })
         }));
       }
-      var map = new ol.Map({
-        layers: layers,
-        // Improve user experience by loading tiles while dragging/zooming. Will make
-        // zooming choppy on mobile or slow devices.
-        loadTilesWhileInteracting: true,
-        target: 'map',
-        view: new ol.View({
-          center: [-105.9316, 35.9241],
-          zoom: 13
-        })
-      });
+     var washingtonLonLat = [-77.036667, 38.895];
+     var washingtonWebMercator = ol.proj.fromLonLat(washingtonLonLat);
+
+     var map = new ol.Map({
+          layers: [
+           new ol.layer.Tile({
+                source: new ol.source.OSM()
+           })
+          ],
+           target: 'map',
+          view: new ol.View({
+           center: washingtonWebMercator,
+           zoom: 8
+            })
+          });
       var select = document.getElementById('layer-select');
       function onChange() {
         var style = select.value;
