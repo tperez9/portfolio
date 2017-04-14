@@ -40,8 +40,8 @@
           })
         }));
       }
-     var washingtonLonLat = [-77.036667, 38.895];
-     var washingtonWebMercator = ol.proj.fromLonLat(washingtonLonLat);
+     var nambeLonLat = [-77.036667, 38.895];
+     var nambeWebMercator = ol.proj.fromLonLat(nambeLonLat);
 
      var map = new ol.Map({
           layers: [
@@ -51,8 +51,8 @@
           ],
            target: 'map',
           view: new ol.View({
-           center: washingtonWebMercator,
-           zoom: 8
+           center: nambeWebMercator,
+           zoom: 13
             })
           });
       var select = document.getElementById('layer-select');
