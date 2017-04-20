@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Milestone 3</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      #map {
+        height: 90%;
+      }
+        </style>
+  </head>
+  <body>
+     var myMap = new ol.Map({
+        target: 'map1'
+        layers: [
+          new ol.layer.Tile ({
+            source: new ol.source.OSM()
+            })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([-105.9316,35.9241]),
+           zoom: 13
+            })
+          });
+  </body>
+</html>
