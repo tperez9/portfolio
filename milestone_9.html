@@ -27,6 +27,16 @@
           zoom: 13
         })
       });
+      var counties_kml_styled = new ol.layer.Vector({
+        source: new ol.source.Vector({
+          url: 'https://s3.amazonaws.com/kkb-web/data/2007fe_35_county00.kml',
+          projection: projection,
+          format: new ol.format.KML({
+            extractStyles:false
+            })
+          }),
+        style: county_style
+        })
     </script>
   </body>
 </html>
