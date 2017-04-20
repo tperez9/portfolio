@@ -8,22 +8,30 @@
         width: 512px;
       }
     </style>
-    <title>Milestone 9</title>
     <script src="/loader.js" type="text/javascript"></script>
+    <title>OpenLayers example</title>
   </head>
   <body>
+    <h1>My Map</h1>
     <div id="map"></div>
-    var myMap = new ol.Map({
-        target: 'map1'
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
         layers: [
-          new ol.layer.Tile ({
-            source: new ol.source.OSM()
+          new ol.layer.Tile({
+            title: 'Global Imagery',
+            source: new ol.source.TileWMS({
+              url: 'https://ahocevar.com/geoserver/wms',
+              params: {LAYERS: 'nasa:bluemarble', TILED: true}
             })
+          })
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([-105.9316,35.9241]),
+          projection: 'EPSG:4326',
+          center: [-105.9316,35.9241],
            zoom: 13
             })
           });
+    </script>
   </body>
 </html>
