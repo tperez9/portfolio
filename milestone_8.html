@@ -3,7 +3,6 @@
      <head> 
           <title>Milestone 8</title>
           <link rel="stylesheet" href="https://openlayers.org/en/v4.0.1/css/ol.css" type="text/css">
-          <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
           <script src="https://openlayers.org/en/v4.0.1/build/ol.js"></script>
      </head>
@@ -30,9 +29,6 @@
           source: new ol.source.BingMaps({
             key: 'Ato8ebqgJEUuEw4gkLYRxTrCQqJryMR5PO0OFjY098gn6VL4zO_WX80I1F4NWuqt',
             imagerySet: styles[i]
-            // use maxZoom 19 to see stretched tiles instead of the BingMaps
-            // "no photos at this zoom level" tiles
-            // maxZoom: 19
           })
         }));
       }
@@ -40,8 +36,6 @@
      var nambeWebMercator = ol.proj.fromLonLat(nambeLonLat);
      var map = new ol.Map({
         layers: layers,
-        // Improve user experience by loading tiles while dragging/zooming. Will make
-        // zooming choppy on mobile or slow devices.
         loadTilesWhileInteracting: true,
         target: 'map',
         view: new ol.View({
