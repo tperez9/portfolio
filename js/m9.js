@@ -1,7 +1,7 @@
 var stroke = new ol.style.Stroke({color: 'blue', width: 3});
 var fill = new ol.style.Fill({color: 'white'});
 
-var projection = ol.proj.get('EPSG:3857');
+var projection = ol.proj.get('EPSG:4326');
 var dealerstyle = new ol.style.Style({
           image: new ol.style.RegularShape({
             fill: fill,
@@ -58,7 +58,18 @@ var dealers = new ol.layer.Vector({
 	style: dealerstyle
 });
 
-var Layer_Stamen_terrain = new ol.layer.Group({
+var nm_counties = new ol.layer.Tile({
+	source: new ol.source.TileWMS({
+		attributes: new ol.Attribution({
+			html: 'RGIS OGC Web Map Service'
+		}),
+		params: {'LAYERS':'WMS Layer','FORMAT':'image/png','TRANSPARENT':'true'},
+		url: 'https://rgis-data.unm.edu/ApolloCatalogWMSPublic/service.svc/get?',
+		projection: projection
+	})
+})
+
+var stamen_terrain = new ol.layer.Group({
     layers: [
         new ol.layer.Tile({
             source: new ol.source.Stamen({layer: 'terrain'})
@@ -68,7 +79,8 @@ var Layer_Stamen_terrain = new ol.layer.Group({
 var myMap = new ol.Map({
 	target: 'map',
 	layers: [
-		Layer_Stamen_terrain,
+		stamen_terrain,
+		nm_counties,
 		dealers
 	],
 	view: new ol.View({
