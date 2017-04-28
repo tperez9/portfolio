@@ -58,29 +58,7 @@ var dealers = new ol.layer.Vector({
 	style: yamahadealers
 })
 
-var New_Mexico_Faults = new ol.layer.Tile({
-	source: new ol.source.TileWMS({
-		attributions: new ol.Attribution({
-			html: 'U.S. Geological Survey Mineral Resources Program'
-		}),
-		params: {'LAYERS':'New_Mexico_Faults','FORMAT':'image/png','TRANSPARENT':'true'},
-		url: 'https://mrdata.usgs.gov/services/nm?',
-		projection: projection
-	})
-})
-
-var Colorado_Faults = new ol.layer.Tile({
-	source: new ol.source.TileWMS({
-		attributions: new ol.Attribution({
-			html: 'U.S. Geological Survey Mineral Resources Program'
-		}),
-		params: {'LAYERS':'Colorado_Faults','FORMAT':'image/png','TRANSPARENT':'true'},
-		url: 'https://mrdata.usgs.gov/services/co?',
-		projection: projection
-	})
-})
-
-var Layer_Stamen_terrain = new ol.layer.Group({
+var layerstamen = new ol.layer.Group({
     layers: [
         new ol.layer.Tile({
             source: new ol.source.Stamen({layer: 'terrain'})
@@ -91,9 +69,7 @@ var Layer_Stamen_terrain = new ol.layer.Group({
 var myMap = new ol.Map({
 	target: 'map',
 	layers: [
-		Layer_Stamen_terrain,
-		New_Mexico_Faults,
-		Colorado_Faults,
+		layerstamen,
 		dealers
 	],
 	view: new ol.View({
