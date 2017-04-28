@@ -1,6 +1,6 @@
 
 var stroke = new ol.style.Stroke({color: 'dark blue', width: 2});
-var fill = new ol.style.Fill({color: 'red'});
+var fill = new ol.style.Fill({color: 'light blue'});
 
 var projection = ol.proj.get('EPSG:3857');
 var yamahadealers = new ol.style.Style({
@@ -69,8 +69,8 @@ var Layer_Stamen_terrain = new ol.layer.Group({
 var myMap = new ol.Map({
 	target: 'map_canvas',
 	layers: [
-		Layer_Stamen_terrain
-		
+		Layer_Stamen_terrain,
+		dealers		
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-109.045187,36.998980]),
