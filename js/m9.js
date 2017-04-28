@@ -1,26 +1,3 @@
-var Layer_Stamen_terrain = new ol.layer.Group({
-    layers: [
-        new ol.layer.Tile({
-            source: new ol.source.Stamen({layer: 'terrain'})
-        })
-    ]
-});
-
-var myMap = new ol.Map({
-	target: 'map',
-	layers: [
-		Layer_Stamen_terrain,
-		dealers		
-	],
-	view: new ol.View({
-		center: ol.proj.fromLonLat([-107.284587, 35.580751]),
-		zoom: 8
-	}),
-	controls: ol.control.defaults().extend([
-		new ol.control.ScaleLine()
-	]),
-	
-});
 
 var stroke = new ol.style.Stroke({color: 'dark blue', width: 2});
 var fill = new ol.style.Fill({color: 'red'});
@@ -81,3 +58,26 @@ var dealers = new ol.layer.Vector({
 	style: yamahadealers
 })
 
+var Layer_Stamen_terrain = new ol.layer.Group({
+    layers: [
+        new ol.layer.Tile({
+            source: new ol.source.Stamen({layer: 'terrain'})
+        })
+    ]
+});
+
+var myMap = new ol.Map({
+	target: 'map',
+	layers: [
+		Layer_Stamen_terrain,
+		dealers		
+	],
+	view: new ol.View({
+		center: ol.proj.fromLonLat([-107.284587, 35.580751]),
+		zoom: 8
+	}),
+	controls: ol.control.defaults().extend([
+		new ol.control.ScaleLine()
+	]),
+	
+});
