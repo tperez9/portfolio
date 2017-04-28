@@ -66,7 +66,7 @@ var Layer_Stamen_terrain = new ol.layer.Group({
     ]
 });
 var myMap = new ol.Map({
-	target: 'map_canvas',
+	target: 'map',
 	layers: [
 		Layer_Stamen_terrain	
 	],
