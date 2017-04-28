@@ -10,11 +10,12 @@ var myMap = new ol.Map({
 	target: 'map',
 	layers: [
 		Layer_Stamen_terrain,
+		dealers
 		
 	],
 	view: new ol.View({
-		center: ol.proj.fromLonLat([-109.045187,36.998980]),
-		zoom: 6
+		center: ol.proj.fromLonLat([-107.284587, 35.580751]),
+		zoom: 7
 	}),
 	controls: ol.control.defaults().extend([
 		new ol.control.ScaleLine()
