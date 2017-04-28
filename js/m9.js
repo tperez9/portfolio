@@ -6,6 +6,22 @@ var Layer_Stamen_terrain = new ol.layer.Group({
     ]
 });
 
+var myMap = new ol.Map({
+	target: 'map',
+	layers: [
+		Layer_Stamen_terrain,
+		
+	],
+	view: new ol.View({
+		center: ol.proj.fromLonLat([-109.045187,36.998980]),
+		zoom: 6
+	}),
+	controls: ol.control.defaults().extend([
+		new ol.control.ScaleLine()
+	]),
+	
+});
+
 var stroke = new ol.style.Stroke({color: 'dark blue', width: 2});
 var fill = new ol.style.Fill({color: 'red'});
 
