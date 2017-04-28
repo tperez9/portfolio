@@ -7,8 +7,8 @@ var yamahadealers = new ol.style.Style({
           image: new ol.style.RegularShape({
             fill: fill,
             stroke: stroke,
-            points: 3,
-            radius: 10,
+            points: 5,
+            radius: 15,
 	    rotation: Math.PI / 4,
             angle: 0
           })
@@ -59,19 +59,18 @@ var dealers = new ol.layer.Vector({
 	style: yamahadealers
 })
 
-var layer_stamen = new ol.layer.Group({
+var Layer_Stamen_terrain = new ol.layer.Group({
     layers: [
         new ol.layer.Tile({
             source: new ol.source.Stamen({layer: 'terrain'})
         })
     ]
 });
-
 var myMap = new ol.Map({
-	target: 'map',
+	target: 'map_canvas',
 	layers: [
-		layer_stamen,
-		dealers
+		Layer_Stamen_terrain
+		
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-109.045187,36.998980]),
