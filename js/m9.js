@@ -1,5 +1,5 @@
-var stroke = new ol.style.Stroke({color: 'blue', width: 2});
-var fill = new ol.style.Fill({color: 'blue'});
+var stroke = new ol.style.Stroke({color: 'blue', width: 3});
+var fill = new ol.style.Fill({color: 'white'});
 
 var projection = ol.proj.get('EPSG:3857');
 var dealerstyle = new ol.style.Style({
