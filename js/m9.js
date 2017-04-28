@@ -59,7 +59,7 @@ var dealers = new ol.layer.Vector({
 });
 
 
-var stamen_terrain = new ol.layer.Group({
+var Layers_Stamen_terrain = new ol.layer.Group({
     layers: [
         new ol.layer.Tile({
             source: new ol.source.Stamen({layer: 'terrain'})
@@ -69,12 +69,12 @@ var stamen_terrain = new ol.layer.Group({
 var myMap = new ol.Map({
 	target: 'map',
 	layers: [
-		stamen_terrain,
+		Layers_Stamen_terrain,
 		dealers
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-107.284587,35.580751]),
-		zoom: 8
+		zoom: 7
 	}),
 	controls: ol.control.defaults().extend([
 		new ol.control.ScaleLine()
