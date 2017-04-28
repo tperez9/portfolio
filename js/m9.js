@@ -63,7 +63,7 @@ var nm_counties = new ol.layer.Tile({
 		attributes: new ol.Attribution({
 			html: 'RGIS OGC Web Map Service'
 		}),
-		params: {'LAYERS':'WMS Layer','FORMAT':'image/png','TRANSPARENT':'true'},
+		params: {'LAYERS':'WMS Layer','FORMAT':'image/png','TRANSPARENT':'false'},
 		url: 'https://rgis-data.unm.edu/ApolloCatalogWMSPublic/service.svc/get?',
 		projection: projection
 	})
@@ -85,7 +85,7 @@ var myMap = new ol.Map({
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-107.284587,35.580751]),
-		zoom: 8
+		zoom: 7
 	}),
 	controls: ol.control.defaults().extend([
 		new ol.control.ScaleLine()
