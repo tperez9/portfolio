@@ -65,7 +65,6 @@ var nm_counties = new ol.layer.Tile({
 		}),
 		params: {'LAYERS':'WMS Layer','FORMAT':'image/png','TRANSPARENT':'false'},
 		url: 'https://rgis-data.unm.edu/ApolloCatalogWMSPublic/service.svc/get?',
-		projection: projection
 	})
 })
 
@@ -80,7 +79,6 @@ var myMap = new ol.Map({
 	target: 'map',
 	layers: [
 		stamen_terrain,
-		nm_counties,
 		dealers
 	],
 	view: new ol.View({
