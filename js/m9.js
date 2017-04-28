@@ -9,6 +9,7 @@ var yamahadealers = new ol.style.Style({
             stroke: stroke,
             points: 3,
             radius: 10,
+	    rotation: Math.PI / 4,
             angle: 0
           })
         })
@@ -58,7 +59,7 @@ var dealers = new ol.layer.Vector({
 	style: yamahadealers
 })
 
-var layerstamen = new ol.layer.Group({
+var layer_stamen = new ol.layer.Group({
     layers: [
         new ol.layer.Tile({
             source: new ol.source.Stamen({layer: 'terrain'})
@@ -69,7 +70,7 @@ var layerstamen = new ol.layer.Group({
 var myMap = new ol.Map({
 	target: 'map',
 	layers: [
-		layerstamen,
+		layer_stamen,
 		dealers
 	],
 	view: new ol.View({
