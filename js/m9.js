@@ -68,11 +68,12 @@ var Layer_Stamen_terrain = new ol.layer.Group({
 var myMap = new ol.Map({
 	target: 'map',
 	layers: [
-		Layer_Stamen_terrain	
+		Layer_Stamen_terrain,
+		dealers
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-107.284587,35.580751]),
-		zoom: 6
+		zoom: 8
 	}),
 	controls: ol.control.defaults().extend([
 		new ol.control.ScaleLine()
