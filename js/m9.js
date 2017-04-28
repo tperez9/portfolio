@@ -68,8 +68,7 @@ var Layer_Stamen_terrain = new ol.layer.Group({
 var myMap = new ol.Map({
 	target: 'map_canvas',
 	layers: [
-		Layer_Stamen_terrain,
-		dealers		
+		Layer_Stamen_terrain	
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-107.284587,35.580751]),
