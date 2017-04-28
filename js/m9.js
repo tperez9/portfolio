@@ -1,13 +1,13 @@
-var stroke = new ol.style.Stroke({color: 'dark blue', width: 2});
-var fill = new ol.style.Fill({color: 'light blue'});
+var stroke = new ol.style.Stroke({color: 'blue', width: 2});
+var fill = new ol.style.Fill({color: 'blue'});
 
 var projection = ol.proj.get('EPSG:3857');
 var dealerstyle = new ol.style.Style({
           image: new ol.style.RegularShape({
             fill: fill,
             stroke: stroke,
-            points: 5,
-            radius: 15,
+            points: 2,
+            radius: 12,
 	    rotation: Math.PI / 4,
             angle: 0
           })
