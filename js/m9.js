@@ -92,7 +92,9 @@ var myMap = new ol.Map({
 	target: 'map',
 	layers: [
 		Layer_Stamen_terrain,
-		dealers		
+		New_Mexico_Faults,
+		Colorado_Faults,
+		dealers
 	],
 	view: new ol.View({
 		center: ol.proj.fromLonLat([-107.284587, 35.580751]),
