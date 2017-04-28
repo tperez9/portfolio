@@ -6,7 +6,7 @@ var dealerstyle = new ol.style.Style({
           image: new ol.style.RegularShape({
             fill: fill,
             stroke: stroke,
-            points: 2,
+            points: 4,
             radius: 12,
 	    rotation: Math.PI / 4,
             angle: 0
