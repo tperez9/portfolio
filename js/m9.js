@@ -58,15 +58,6 @@ var dealers = new ol.layer.Vector({
 	style: dealerstyle
 });
 
-var nm_counties = new ol.layer.Tile({
-	source: new ol.source.TileWMS({
-		attributes: new ol.Attribution({
-			html: 'RGIS OGC Web Map Service'
-		}),
-		params: {'LAYERS':'WMS Layer','FORMAT':'image/png','TRANSPARENT':'false'},
-		url: 'https://rgis-data.unm.edu/ApolloCatalogWMSPublic/service.svc/get?',
-	})
-})
 
 var stamen_terrain = new ol.layer.Group({
     layers: [
