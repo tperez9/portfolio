@@ -58,6 +58,14 @@
  	style: dealerstyle
  });
  
+var cities_kml = new ol.layer.Vector({
+ source: new ol.source.Vector({
+  url: 'https://tperez9.github.io/portfolio/js/cities.kml',
+  projection: projection,
+  format: new ol.format.KML()
+ })
+});
+
 var nm_counties = new ol.layer.Tile({
  source: new ol.source.TileWMS({
   attributions: new ol.Attribution({
@@ -80,6 +88,7 @@ var nm_counties = new ol.layer.Tile({
  	layers: [
  		Layer_Stamen_terrain,
    nm_counties,
+   cities_kml,
  		dealers
  	],
  	view: new ol.View({
