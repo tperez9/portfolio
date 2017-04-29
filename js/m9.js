@@ -58,6 +58,16 @@
  	style: dealerstyle
  });
  
+var nm_counties = new ol.layer.Tile({
+ source: new ol.source.TileWMS({
+  attributions: new ol.Attribution({
+   html: 'RGIS OGC Web Map Service'
+  }),
+  params: {'LAYERS':'New_Mexico_County_Boundaries','FORMAT':'image/png','TRANSPARENT':'false'},
+  url: 'https://rgis-data.unm.edu/ApolloCatalogWMSPublic/service.svc/get?',
+ })
+});
+
  var Layer_Stamen_terrain = new ol.layer.Group({
      layers: [
          new ol.layer.Tile({
