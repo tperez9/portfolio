@@ -60,7 +60,7 @@
  
 var cities_kml = new ol.layer.Vector({
  source: new ol.source.Vector({
-  url: 'https://tperez9.github.io/portfolio/js/cities.kml',
+  url: 'https://tperez9.github.io/portfolio/js/cities1.kml',
   projection: projection,
   format: new ol.format.KML()
  })
