@@ -63,7 +63,7 @@ var nm_counties = new ol.layer.Tile({
   attributions: new ol.Attribution({
    html: 'RGIS OGC Web Map Service'
   }),
-  params: {'LAYERS':'New_Mexico_County_Boundaries','FORMAT':'image/png','TRANSPARENT':'true'},
+  params: {'LAYERS':'New_Mexico_County_Boundaries','FORMAT':'image/png'},
   url: 'https://rgis-data.unm.edu/ApolloCatalogWMSPublic/service.svc/get?',
  })
 });
