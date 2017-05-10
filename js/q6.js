@@ -6,7 +6,7 @@ var tifA5 = new ol.layer.Tile({
 			html: 'GeoServer'
 		}),
 		params: {'LAYERS':'ws_tperez:tp_35106-A5'},
-		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&',
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&request=GetCapabilities',
 		serverType: 'geoserver',
 		projection: projection,
 		format: new ol.format.KML({
@@ -21,7 +21,7 @@ var tif_A6 = new ol.layer.Tile({
 			html: 'GeoServer'
 		}),
 		params: {'LAYERS':'ws_tperez:tp_35106-A6'},
-		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&',
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&request=GetCapabilities',
 		serverType: 'geoserver',
 		projection: projection,
 		format: new ol.format.KML({
@@ -37,7 +37,7 @@ var contours_A5 = new ol.layer.Tile({
 			html: 'GeoServer'
 		}),
 		params: {'LAYERS':'ws_tperez:tp_35106-A5_CONT'},
-		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&',
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&request=GetCapabilities',
 		serverType: 'geoserver',
 		projection: projection,
 		format: new ol.format.KML({
@@ -51,8 +51,8 @@ var contours_A6 = new ol.layer.Tile({
 		attributions: new ol.Attribution({
 			html: 'GeoServer'
 		}),
-		params: {'LAYERS':'ws_tperez:tp_35106-A6_CONT','TRANSPARENT':'true'},
-		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&',
+		params: {'LAYERS':'ws_tperez:tp_35106-A6_CONT'},
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&request=GetCapabilities',
 		serverType: 'geoserver',
 		projection: projection,
 		format: new ol.format.KML({
@@ -66,8 +66,8 @@ var roads = new ol.layer.Tile({
 		attributions: new ol.Attribution({
 			html: 'GeoServer'
 		}),
-		params: {'LAYERS':'ws_tperez:tp_tgr2006se_bern_lka','TRANSPARENT':'true'},
-		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&',
+		params: {'LAYERS':'ws_tperez:tp_tgr2006se_bern_lka'},
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&request=GetCapabilities',
 		serverType: 'geoserver',
 		projection: projection,
 		format: new ol.format.KML({
