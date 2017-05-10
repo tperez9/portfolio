@@ -94,7 +94,7 @@ var Layer_Stamen_terrain = new ol.layer.Group({
   	],
   	view: new ol.View({
  		center: ol.proj.fromLonLat([-106.610, 35.06]),
- 		zoom: 12
+ 		zoom: 11
   	}),
   	controls: ol.control.defaults().extend([
   		new ol.control.ScaleLine()
