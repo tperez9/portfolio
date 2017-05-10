@@ -1,6 +1,6 @@
 var projection = ol.proj.get('EPSG:4326');
 
-var tifA5 = new ol.layer.Tile({
+var A5_tiff = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		attributions: new ol.Attribution({
 			html: 'GeoServer'
@@ -15,7 +15,7 @@ var tifA5 = new ol.layer.Tile({
 	})
 })
 
-var tif_A6 = new ol.layer.Tile({
+var A6_tiff = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		attributions: new ol.Attribution({
 			html: 'GeoServer'
@@ -31,7 +31,7 @@ var tif_A6 = new ol.layer.Tile({
 })
 
 
-var contours_A5 = new ol.layer.Tile({
+var A5_cont = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		attributions: new ol.Attribution({
 			html: 'GeoServer'
@@ -46,7 +46,7 @@ var contours_A5 = new ol.layer.Tile({
 	})
 })
 
-var contours_A6 = new ol.layer.Tile({
+var A6_cont = new ol.layer.Tile({
 	source: new ol.source.TileWMS({
 		attributions: new ol.Attribution({
 			html: 'GeoServer'
@@ -75,3 +75,29 @@ var roads = new ol.layer.Tile({
 		})
 	})
 })
+var Layer_Stamen_terrain = new ol.layer.Group({
+      layers: [
+          new ol.layer.Tile({
+              source: new ol.source.Stamen({layer: 'terrain'})
+          })
+      ]
+  });
+  var map = new ol.Map({
+  	target: 'map_q6',
+  	layers: [
+  		Layer_Stamen_terrain,
+ 		A5_tiff,
+ 		A6_tiff,
+ 		A5_cont,
+ 		A6_cont,
+ 		roads
+  	],
+  	view: new ol.View({
+ 		center: ol.proj.fromLonLat([-106.610, 35.111]),
+ 		zoom: 11
+  	}),
+  	controls: ol.control.defaults().extend([
+  		new ol.control.ScaleLine()
+  	]),
+  	
+  });
