@@ -75,30 +75,3 @@ var roads = new ol.layer.Tile({
 		})
 	})
 })
-
-var Layer_Stamen_terrain = new ol.layer.Group({
-     layers: [
-         new ol.layer.Tile({
-             source: new ol.source.Stamen({layer: 'terrain'})
-         })
-     ]
- });
- var map = new ol.Map({
- 	target: 'map_q6',
- 	layers: [
- 		Layer_Stamen_terrain,
-		tif_A5,
-		tif_A6,
-		contours_A5,
-		contours_A6,
-		roads
- 	],
- 	view: new ol.View({
-		center: ol.proj.fromLonLat([-106.610, 35.111]),
-		zoom: 11
- 	}),
- 	controls: ol.control.defaults().extend([
- 		new ol.control.ScaleLine()
- 	]),
- 	
- });
