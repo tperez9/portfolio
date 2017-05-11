@@ -44,7 +44,7 @@ var Layer_Stamen_terrain = new ol.layer.Group({
  	  	roads_st
   	],
   	view: new ol.View({
- 		center: ol.proj.fromLonLat([-106.59, 35.07]),
+ 		center: ol.proj.fromLonLat([-106.59, 35.08]),
  		zoom: 13
   	}),
   	controls: ol.control.defaults().extend([
