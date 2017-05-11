@@ -6,7 +6,7 @@ var A5_cont_st = new ol.layer.Tile({
 			html: 'GeoServer'
 		}),
 		params: {'LAYERS':'ws_tperez:35106-A5_CONT_ST'},
-		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&request=GetCapabilities',
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?service=WMS&version=1.1.0&',
 		serverType: 'geoserver',
 		projection: projection,
 		format: new ol.format.KML({
@@ -21,7 +21,7 @@ var roads_st = new ol.layer.Tile({
 			html: 'GeoServer'
 		}),
 		params: {'LAYERS':'ws_tperez:tgr2006se_bern_lka_ST'},
-		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?version=1.1.1&request=GetCapabilities',
+		url: 'http://mapper.internetmapping.net:8081/geoserver/ws_tperez/wms?service=WMS&version=1.1.0&',
 		serverType: 'geoserver',
 		projection: projection,
 		format: new ol.format.KML({
