@@ -37,7 +37,7 @@ var Layer_Stamen_terrain = new ol.layer.Group({
       ]
   });
   var map = new ol.Map({
-  	target: 'map_q6',
+  	target: 'map_q7',
   	layers: [
   		Layer_Stamen_terrain,
   		A5_cont_st,
